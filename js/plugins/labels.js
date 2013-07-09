@@ -32,7 +32,7 @@ Flotr.addPlugin('labels', {
       ctx.translate(this.plotOffset.left + this.plotWidth / 2,
           this.plotOffset.top + this.plotHeight / 2);
 
-      radius = this.plotHeight * options.radar.radiusRatio / 2 + options.fontSize;
+      radius = Math.min(this.plotWidth,this.plotHeight) * options.radar.radiusRatio / 2 + options.fontSize;
       sides  = this.axes.x.ticks.length;
       coeff  = 2 * (Math.PI / sides);
       angle  = -Math.PI / 2;
